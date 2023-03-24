@@ -23,7 +23,7 @@ app.post("/", (req, res) => {
     }
   );
 
-  res.send(`Thanks for submitting the form, ${name}!`);
+  res.render("thank-you");
 });
 const PORT = 4040;
 

@@ -2,17 +2,34 @@
 <html>
   <head>
     <meta charset="UTF-8" />
-    <title>My Form</title>
+    <title>Digitalsite.io - Early access</title>
     <style>
+      @import url("https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap");
+      @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap");
+
       body {
-        font-family: Arial, sans-serif;
-        background-color: #f2f2f2;
+        font-family: "Oswald", sans-serif;
+        background: linear-gradient(to right, #a0dbb7, #8fd3f4);
       }
       h1 {
-        font-size: 32px;
-        color: #333;
+        font-family: "Montserrat", sans-serif;
+        font-size: 48px;
         text-align: center;
         margin-top: 50px;
+        color: #00a584;
+      }
+      h2 {
+        font-size: 24px;
+        font-weight: bold;
+        color: #333333;
+        text-align: center;
+        margin-bottom: 20px;
+      }
+      p {
+        font-size: 18px;
+        text-align: center;
+        color: #333333;
+        margin-bottom: 30px;
       }
       form {
         width: 500px;
@@ -21,6 +38,9 @@
         padding: 30px;
         border-radius: 10px;
         box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+        animation-name: fadeIn;
+        animation-duration: 1s;
+        animation-fill-mode: both;
       }
       label {
         display: block;
@@ -39,31 +59,55 @@
         border-radius: 5px;
         border: none;
         box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+        transition: box-shadow 0.3s ease-in-out;
+      }
+      input[type="text"]:focus,
+      input[type="email"]:focus,
+      input[type="tel"]:focus {
+        outline: none;
+        box-shadow: 0px 0px 10px #1abc9c80;
       }
       button[type="submit"] {
-        background-color: #333;
+        background: #1abc9c;
         color: #fff;
+        font-family: "Oswald", sans-serif;
         font-size: 16px;
-        padding: 10px 20px;
+        padding: 10px 40px;
         border: none;
         border-radius: 5px;
         cursor: pointer;
+        transition: background-color 0.3s ease-in-out;
       }
+
       button[type="submit"]:hover {
-        background-color: #444;
+        background: #16a085;
+      }
+
+      span {
+        color: #006853;
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
       }
     </style>
   </head>
   <body>
-    <h1>My Form</h1>
+    <h1>digitalsite.io</h1>
+    <h2>Sign up to get early access!</h2>
     <form method="post">
       <label for="name">Name:</label>
       <input type="text" id="name" name="name" required />
 
-      <label for="email">Email:</label>
+      <label for="email">Email address:</label>
       <input type="email" id="email" name="email" required />
 
-      <label for="phone">Phone:</label>
+      <label for="phone">Phone number:</label>
       <input type="tel" id="phone" name="phone" required />
 
       <button type="submit">Submit</button>
